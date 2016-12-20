@@ -1,0 +1,137 @@
+* {
+	box-sizing: border-box;
+    }
+
+body {
+	   background-image: url('../images/back1.jpeg');
+	   background-color: #777;
+	   repeat: no-repeat;
+       background-size: cover;
+       min-height: 100%;
+	   font-family: 'Georgia', Times, Times New Roman, serif;
+	   font-size: 16px;
+	   line-height: 20px;
+	}
+
+h1, h2, h3, h4 {
+        font-family: 'Georgia', Times, Times new Roman, serif;
+        color: #ffffff;
+    }
+
+h1  {
+	    font-size: 25px;
+	    line-height: 50px;
+	    border-bottom: 3px solid #333;
+	    padding-bottom: 20px;
+    }
+
+h2, h3  {
+	    font-size: 22px;
+    }
+
+h4  {
+	    font-size: 18px;
+}
+
+/*header*/
+
+#porthead  {
+        background: #ffffff;
+	    z-index: 99;
+	    width: 100%;
+	    overflow: auto;
+	    border-color: #cccccc;
+	    border-bottom: 5px solid #ccc;
+	    margin: 0 0 30px;
+	    position: fixed;
+	     
+	   }
+
+#nametag  {
+	    width: 350px;
+	    height: 70px;
+	    background: #333333;
+	    float: left;
+	    font-family: 'Georgia', Times, Times New Roman, serif;
+	    font-size: 28px;
+	    text-align: center;
+	    line-height: 90px;
+	    color: #ffffff;
+	    text-decoration: none;
+    }
+
+nav    {
+	    float: right;
+	    margin-top: 10px;
+    }
+
+nav a  {
+        color: #333333;
+        text-decoration: none;
+        margin-left: 15px;
+        display: inline-block;
+        border-left: 2px solid #efefef;
+        padding-left: 15px;
+        line-height: 18px;
+    }
+
+nav a:first child  {
+	border-left: 0 none;
+    }
+
+/**/
+
+
+#row-players  {
+	    
+        position: relative;
+	    display: inline;
+	    margin: 15px 10px 15px 0;
+    }
+
+
+
+.col-md-2 img  {
+	  
+	    position: relative;
+	    border: none;
+    }
+
+.col-md-2 h3  {
+	    border-bottom: 0;
+	    background: #333333;
+	    color: #ffffff;
+	    text-align: center;
+	    position: absolute;
+	    bottom: 10px;
+	    padding: 10px;
+	    width: 100%;
+	    line-height: 25px;
+	    margin-bottom: 0;
+    }
+
+#row-1 {
+	    clear: both;
+	    position: relative;
+	    float: left;
+}
+
+#middle-row {
+	    
+	    position: relative;
+	    float: left;
+}
+
+#row-2  {
+	    clear: both;
+	    overflow: auto;
+	    position: relative;
+	    float: right;
+}
+
+
+
+
+
+
+
