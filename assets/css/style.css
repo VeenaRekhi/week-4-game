@@ -91,13 +91,15 @@ nav a:first child  {
 
 
 
-.col-md-2 img  {
-	  
+.contenders img  {
+	    
 	    position: relative;
 	    border: none;
     }
 
-.col-md-2 h3  {
+
+
+.contenders h3  {
 	    border-bottom: 0;
 	    background: #333333;
 	    color: #ffffff;
@@ -122,15 +124,23 @@ nav a:first child  {
 	    float: left;
 }
 
-#row-2  {
-	    clear: both;
-	    overflow: auto;
+#row-2, .glowClass2 {
+	      
+	    font-size:2em;
 	    position: relative;
 	    float: right;
 }
 
-
-
+#row-3  {
+	    clear: both;
+        position: relative;
+}
+	
+#row-4  {
+	    float: right;
+	    clear: both;
+	    position: relative;
+	}
 
 
 

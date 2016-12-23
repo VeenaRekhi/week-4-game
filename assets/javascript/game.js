@@ -7,7 +7,7 @@ $(document).ready(function()  {
     
     var startTheGame = false;
 // Declare and set all the varaiables,
-	var players;
+	var contenders;
 
 // Create variable "attackRounds" and set it to max no of rounds 10.
 	var attackRounds = 0;
@@ -58,7 +58,7 @@ $(document).ready(function()  {
 //{ When a user does a mouseup or click event on any element from groupOfEnemy array,
 // in HTML file, HTML will pass the control of the programe to the javascript.}
 
-    $(".players").on("click", function(){
+    $(".contenders").on("click", function(){
     alert("Select Your Character to play!!");
     startTheGame = true;
     if (myCharacter == false) {
@@ -94,7 +94,7 @@ $(document).ready(function()  {
         myCurrentAttackPower = myAttackPower;
         $("#myCharacter").append(this);// After getting this very first "on click" on HTML, 
         $(this).addClass("myHero");
-        $(this).removeClass("players");
+        $(this).removeClass("contenders");
         enemiesRemaining--   //move that element to the "your chosen character" area! 
      
     }
@@ -139,16 +139,13 @@ $(document).ready(function()  {
         
         $("#myAttacker").append(this);// Move your opponent to the "defender's zone"!
         $(this).addClass("myVillain");
-        $(this).removeClass("players");
+        $(this).removeClass("contenders");
         myAttacker = true;
         enemiesRemaining--;
-        enemiesRemaining = players - myCharacter - myAttacker; 
+        enemiesRemaining = contenders - myCharacter - myAttacker; 
         
-        $(".players").appendTo("#enemiesWaiting");
+        $(".contenders").appendTo("#enemiesWaiting");
         myCurrentAttackPower = myAttackPower;
-       
-
-        //$(".players").slideDown("slow");
 
         }
     }
@@ -198,7 +195,7 @@ $(document).ready(function()  {
 // The health points will remain unchanged!!
 
 
-        $(".myVillain").appendTo(".fallenOnes");
+        $(".myVillain").appendTo("#fallenEnemies");
         $(".myVillain").css({"opacity": 0.5});
             myAttacker = false;
             numberOfEnemies--;
@@ -210,10 +207,10 @@ $(document).ready(function()  {
         if   (myHealthPoints <= 0) {  
         //Third action,....                                   //There will be no change in all attributes of players and
             alert("Game over!! Press Restart Button to start the game again!!");// game points at the new fresh start.
-            $(".myHero").appendTo(".fallenOnes");//When the health points of myHero character goes to 0
+            $(".myHero").appendTo("#fallenEnemies");//When the health points of myHero character goes to 0
                                                                 //or below 0 then the game will be over.
             myCharacter = false;                                //On  next click, you will have to start the game by 
-                                                                //selecting your player character again.
+            $("losses").append("<span>" + " " + "</span>");                                                    //selecting your player character again.
             losses++;
             document.getElementById('losses').innerHTML = losses;
             numberOfEnemies = 5;
@@ -221,29 +218,29 @@ $(document).ready(function()  {
             myAttacker = false;
         
 
-        $(".fallenOnes").addClass("players");
-       
-        $(".myHero").addClass("players");
-        $(".myVillain").addClass("players");
-        $(".players").removeClass("myHero");
-        $(".players").removeClass("myVillain");
+        $(".fallenOnes").addClass("contenders");
+        $(".myHero").addClass("contenders");
+        $(".myVillain").addClass("contenders");
+        $(".contenders").removeClass("myHero");
+        $(".contenders").removeClass("myVillain");
+        $(".contenders").removeClass("fallenOnes");
         
 
         $(".megatron").appendTo("#row-players");
-        $(".megatron").addClass("players");
+        $(".megatron").addClass("contenders");
         $(".starscream").appendTo("#row-players");
-        $(".starscream").addClass("players");
+        $(".starscream").addClass("contenders");
         $(".shockwave").appendTo("#row-players");
-        $(".shockwave").addClass("players");
+        $(".shockwave").addClass("contenders");
         $(".prime").appendTo("#row-players");
-        $(".prime").addClass("players");
+        $(".prime").addClass("contenders");
         $(".bumblebee").appendTo("#row-players");
-        $(".bumblebee").addClass("players");
+        $(".bumblebee").addClass("contenders");
         $(".arcee").appendTo("#row-players");
-        $(".arcee").addClass("players");
+        $(".arcee").addClass("contenders");
 
 
-            $(".players").css({"opacity": 1});
+            $(".contenders").css({"opacity": 1});
           
             
     }
@@ -251,7 +248,7 @@ $(document).ready(function()  {
             //Fourth action,....           //When the health points of "very last enemy character" goes 
                                            //to 0 or below 0 then on  next click, the game will get reset 
                                            //and the player will start the new game with new character!!
-            $(".myVillain").appendTo(".fallenOnes");//
+            $(".myVillain").appendTo("#fallenEnemies");//
             myAttacker = false;
             numberOfEnemies === 0;
        
@@ -285,29 +282,29 @@ $(document).ready(function()  {
         
 
 
-        $(".fallenOnes").addClass("players");
-        
-        $(".myHero").addClass("players");
-        $(".myVillain").addClass("players");
-        $(".players").removeClass("myHero");
-        $(".players").removeClass("myVillain");
+        $(".fallenOnes").addClass("contenders");
+        $(".myHero").addClass("contenders");
+        $(".myVillain").addClass("contenders");
+        $(".contenders").removeClass("myHero");
+        $(".contenders").removeClass("myVillain");
+        $(".contenders").removeClass("fallenOnes");
         
 
         $(".megatron").appendTo("#row-players");
-        $(".megatron").addClass("players");
+        $(".megatron").addClass("contenders");
         $(".starscream").appendTo("#row-players");
-        $(".starscream").addClass("players");
+        $(".starscream").addClass("contenders");
         $(".shockwave").appendTo("#row-players");
-        $(".shockwave").addClass("players");
+        $(".shockwave").addClass("contenders");
         $(".prime").appendTo("#row-players");
-        $(".prime").addClass("players");
+        $(".prime").addClass("contenders");
         $(".bumblebee").appendTo("#row-players");
-        $(".bumblebee").addClass("players");
+        $(".bumblebee").addClass("contenders");
         $(".arcee").appendTo("#row-players");
-        $(".arcee").addClass("players");
+        $(".arcee").addClass("contenders");
 
 
-            $(".players").css({"opacity": 1});
+            $(".contenders").css({"opacity": 1});
 
 
         });
